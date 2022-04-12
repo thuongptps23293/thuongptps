@@ -1,0 +1,103 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="CSS/bai1.css">
+    <title>Phạm Thanh Thương - PS23293</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div class="container">
+        <h3> Giải Phương trình ax<sup>2</sup> + bx + c = 0</h3>
+        <span> Số lần giải : <b id="solangiai"></b> </span>
+
+        <hr>
+        <form>
+            <p> <label>Nhập số a: </label> <input type="text" id="a"></p>
+            <p> <label>Nhập số b: </label> <input type="text" id="b"></p>
+            <p> <label>Nhập số c: </label> <input type="text" id="c"></p>
+            <button type="button" class="nut_khoa" disabled id="btngiai" onclick="ptb2.giai(); dem();">Giải PT</button>
+            <button type="button" class="nut" id="btnchoso" onclick="choso()"> Cho số</button>
+        </form>
+        <div id="kq"> </div>
+        <p id="dongho">2020-03-17 17:55 </p>
+    </div>
+</body>
+
+</html>
+<script>
+    function choso() {
+        var a = Math.round(Math.random() * 10);
+        var b = Math.round(Math.random() * 10);
+        var c = Math.round(Math.random() * 10);
+        document.getElementById("a").value = a;
+        document.getElementById("b").value = b;
+        document.getElementById("c").value = c;
+        var btn = document.getElementById("btngiai");
+        btn.disabled = false;
+        btn.className = 'nut';
+    }   
+</script>
+<script>
+    var ptb2 = {
+        giai: function () {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            var c = document.getElementById("c").value;
+            if (a == 0) {
+                if (b == 0) {
+                    if (c == 0) {
+                        document.getElementById("kq").innerHTML = "<p> Vô số nghiệm </p>";
+                    }
+                }
+            } else {
+                var delta = b * b - 4 * a * c;
+                if (delta < 0) {
+                    document.getElementById("kq").innerHTML = "<p> Vô nghiệm </p>";
+                }
+                else if (delta == 0) {
+                    var x = -b / (2 * a);
+                    str = `<p> Phương trình có nghiệm kép: ${x.toFixed(2)}</p>`;
+                    document.getElementById("kq").innerHTML = str;
+                }
+                else {
+
+                    var x1 = (-b - Math.sqrt(delta)) / (2 * a);
+                    var x2 = (-b + Math.sqrt(delta)) / (2 * a);
+                    var str = `<p>Phương trình có 2 nghiệm phân biệt </p>
+                                   <p>X<sub>1</sub> = ${x1.toFixed(2)} </p>
+                                   <p>X<sub>2</sub> = ${x2.toFixed(2)} </p>
+                                  `;
+                    document.getElementById("kq").innerHTML = str;
+                }
+            }
+            btn = document.getElementById("btngiai");
+            btn.className = "nut_khoa";
+            btn.disabled = true;
+        }
+    }
+</script>
+<script>
+    var solangiai = 0;
+    function dem() {
+        solangiai++;
+        document.getElementById("solangiai").innerHTML = solangiai;
+    }
+
+
+
+</script>
+<script>
+    function tg() {
+        var d = new Date();
+        var nam = d.getFullYear();
+        var thang = d.getMonth() + 1;
+        var ngay = d.getDate();
+        var gio = d.getHours();
+        var phut = d.getMinutes();
+        var giay = d.getSeconds();
+        var str = `Bây giờ là ${ngay}/${thang}/${nam} ${gio}:${phut}:${giay}`;
+        document.getElementById("dongho").innerHTML = str;
+    }
+    setInterval("tg()", 1000);
+</script>

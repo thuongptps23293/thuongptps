@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src=cart.js></script>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="giohang">
+        <a onclick="showcart();"><img src="images/cart.png"><span id="countsp">0</span></a>
+    </div>
+    <!-- <div id="showcart">
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Hình</th>
+                <th>Tên sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền ($)</th>
+            </tr>
+            <tbody id="mycart">
+
+            </tbody>
+
+        </table>
+    </div> -->
+    <div class="boxcenter">
+        <div class="row mb header">
+            <h1> SIÊU THỊ TRỰC TUYẾN</h1>
+        </div>
+
+        <div class="row mb menu">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="#">Giỏ hàng</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Góp ý</a></li>
+                <li><a href="#">Hỏi đáp</a></li>
+            </ul>
+        </div>
+        <div class="row mb ">
+            <div class="row">
+                <div class="banner mb">
+                    <img src="images/cop.jpg" width="100%" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/1.jpg" alt=""></div>
+                    <p>$<span>10</span></p>
+                    <a href="https://www.thegioididong.com/laptop/msi-gaming-gf63-thin-11ud-i7-648vn?src=osp">Laptop MSI Gaming GF63</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/2.jpg" alt=""></div>
+                    <p>$<span>20</span></p>
+                    <a href="#">Laptop Asus Gaming ROG</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp ">
+                    <div class="row img"><img src="images/3.jpg" alt=""></div>
+                    <p>$<span>30</span></p>
+                    <a href="https://www.thegioididong.com/laptop/acer-nitro-5-gaming-an515-57-5831-i5-nhqdgsv003?src=osp">Laptop Acer Nitro 5 Gaming</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/4.jpg" alt=""></div>
+                    <p>$<span>40</span></p>
+                    <a href="https://www.thegioididong.com/laptop/dell-gaming-alienware-m15-r6-i7-p109f001dbl?src=osp">Laptop Dell Gaming Alienware m15 R6</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/5.jpg" alt=""></div>
+                    <p>$<span>50</span></p>
+                    <a href="https://www.thegioididong.com/laptop/lenovo-gaming-legion-5-15ach6-r7-82jw00kmvn?src=osp">Laptop Lenovo Gaming Legion 5</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp ">
+                    <div class="row img"><img src="images/6.jpg" alt=""></div>
+                    <p>$<span>60</span></p>
+                    <a href="https://www.thegioididong.com/laptop/asus-tuf-gaming-fx516pm-i7-hn002w?src=osp">Laptop Asus TUF Gaming FX516PM</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/7.jpg" alt=""></div>
+                    <p>$<span>70</span></p>
+                    <a href="https://www.thegioididong.com/laptop/acer-nitro-5-an515-45-r9sc-r7-nhqbrsv001?src=osp">Laptop Acer Nitro 5 AN515</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/8.jpg" alt=""></div>
+                    <p>$<span>80</span></p>
+                    <a href="https://www.thegioididong.com/laptop/dell-gaming-g15-5515-r7-70266674?src=osp">Laptop Dell Gaming G15</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp ">
+                    <div class="row img"><img src="images/9.jpg" alt=""></div>
+                    <p>$<span>90</span></p>
+                    <a href="https://www.thegioididong.com/laptop/hp-gaming-victus-16-d0202tx-i5-4r0u4pa?src=osp">Laptop HP Gaming VICTUS</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>

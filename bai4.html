@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="CSS/bai4.css">
+        <title>Phạm Thanh Thương - PS23293</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+        <div id="hm">
+            <form id = "dangky">
+                <h2>ĐĂNG KÝ THÀNH VIÊN</h2>
+                <P>
+                    <label> Mã sinh viên</label>
+                    <input type="text" class="txt" maxlength="7" placeholder="Nhập đúng 7 ký tự">
+                </P>
+                <p>
+                    <label> Họ và tên</label>
+                    <input type="tex" class="txt" placeholder="Nhập tối đa 30 ký tự"   maxlength="30">
+                </p>
+                <p>
+                    <label> Email</label>
+                    <input type="tex" class="txt"  placeholder="...@gmail.com">
+                </p>
+              
+                <p>
+                    <label>Giới tính</label>
+                    <input type="radio" value="0" name="gioitinh" checked>Nam
+                    <input type="radio" value="1" name="gioitinh"> Nữ
+                </p>
+                <p>
+                    <label>Hình ảnh</label>
+                    <input type="file" class="tx" placeholder="Chọn hình của bạn" name="ha">
+                </p>
+                <p>
+                    <label>Quốc tịch</label>
+                    <select name="qt" class="txt">
+                    <option value="0">Chọn quốc tịch</option>
+                    <option value="1">Việt Nam</option>
+                    <option value="2">USA</option>
+                    <option value="3">Khác</option>
+                </select>
+                </p>
+                <p >
+                    <label>Sở thích</label>
+                    <p class="st">
+                    <input type="checkbox" checked> Đọc sách 
+                    <input type="checkbox" checked> Du lịch 
+                    <input type="checkbox" checked> Ẩm thực 
+                    <input type="checkbox" checked> Âm nhạc 
+                    <input type="checkbox" checked> Khác
+
+                </p>
+                </p> 
+                <p >
+                    <label class="gc">Ghi chú</label>
+                    <textarea cols="50" rows="5" class="gcc"></textarea>
+                    
+                    
+    
+                </p>
+                <p id="hc">
+                    <label> </label>
+                    <button  type="submit"> Đăng ký </button>
+                    <button  type="reset"> Làm lại </button>
+                </p>
+            </form>
+        </div>
+    </body>
+</html>

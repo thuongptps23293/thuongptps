@@ -1,0 +1,37 @@
+.container{
+    width: 500px; margin: auto;
+    background-color: red; color: white;
+    font-size: 22px; text-align: center;
+    border: solid 2px white;
+    border-radius: 15px;
+}
+form input[id]{
+    width: 200px; text-align: center;
+    padding: 6px 0;
+    border: solid 1px black;
+    background-color: blanchedalmond;
+}
+form button{
+    width: 120px; height: 40px;
+}
+.nut{
+    background: lightseagreen;
+    color: white;
+}
+.nut_khoa{
+    background: darksalmon;
+    color: white;
+}
+#solangiai{
+    color: yellow;
+}
+#kq{
+    height: 150px;
+    margin: 10px 50px 0 50px;
+    border: 1px double white;
+}
+#dongho{
+    color: yellow;
+    
+    font-size: italic;
+}

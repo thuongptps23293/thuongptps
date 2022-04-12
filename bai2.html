@@ -1,0 +1,49 @@
+<html>
+    <head>
+       <link rel="stylesheet" href="CSS/bai2.css"> 
+       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+       <title>Phạm Thanh Thương - PS23293</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        
+        <div class="container">
+            <h2>Album ảnh làng quê VIệt Nam</h2>
+            <img id="hinh" src="img/0.jpg" >
+        <div class="dieuhuong">
+            <i class="fa fa-chevron-circle-left" onclick="prev()"></i>
+            <i class="fa fa-chevron-circle-right" onclick="next()"></i>
+        </div>
+        <p id="dem">1/8</p>
+        </div>
+    </body>
+    
+</html>
+<script>
+    var arr_hinh=[
+        "img/0.jpg",
+        "img/1.jpg",
+        "img/2.jpg",
+        "img/3.jpeg",
+        "img/4.jpg",
+        "img/5.jpg",
+        "img/6.jpg",
+        "img/7.jpg",
+        
+    ]
+    var index=1;
+    function next(){
+    index++;
+    if(index>=arr_hinh.length)index=1;
+    document.getElementById('hinh');
+    hinh.src=arr_hinh[index];
+    document.getElementById('dem').innerHTML =index+"/" + arr_hinh.length;
+}
+    function prev(){
+    index--;
+    if(index<1) index= arr_hinh.length -1;
+    document.getElementById('hinh').src=arr_hinh[index];
+    document.getElementById('dem').innerHTML =index+"/" + arr_hinh.length;
+}
+</script>
